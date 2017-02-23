@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+    <LinearLayout
+        android:id="@+id/rl_personal_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/side_nav_bar">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/civ_user_icon"
+              android:layout_width="70dp"
+              android:layout_height="70dp"
+              android:src="@mipmap/head"
+              app:civ_border_color="#aaFFFFFF"
+              android:padding="8dp"
+              app:civ_border_width="2dp" />
+            <Button
+                android:id="@+id/tv_personal_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingBottom="15dp"
+                android:clickable="true"
+                android:text="点击登陆"
+                android:textColor="#a000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_personal_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shadow_bottom" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_msg"
+            style="@style/personal_rl">
+            <ImageView
+                android:id="@+id/iv_ct_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/personal_msg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:layout_toRightOf="@id/iv_ct_msg"
+                android:layout_centerVertical="true"
+                android:text="消息通知"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="16dp"
+                android:src="@mipmap/right_arrow"/>
+        </RelativeLayout>
+        <View
+            style="@style/bg_line"/>
+        <RelativeLayout
+            android:id="@+id/rl_personal_check"
+            style="@style/personal_rl">
+            <ImageView
+                android:id="@+id/iv_ct_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/personal_check"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:layout_toRightOf="@id/iv_ct_check"
+                android:layout_centerVertical="true"
+                android:text="检查更新"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="16dp"
+                android:src="@mipmap/right_arrow"/>
+        </RelativeLayout>
+        <View
+            style="@style/bg_line"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_about"
+            style="@style/personal_rl">
+            <ImageView
+                android:id="@+id/iv_ct_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/personal_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:layout_toRightOf="@id/iv_ct_about"
+                android:layout_centerVertical="true"
+                android:text="关于MEMS"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="16dp"
+                android:src="@mipmap/right_arrow"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/bg_line"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shadow_bottom" />
+        <RelativeLayout
+            android:id="@+id/rl_personal_exit"
+            style="@style/personal_rl"
+            android:layout_gravity="bottom">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:text="退出登陆"/>
+
+        </RelativeLayout>
+        <View
+            style="@style/bg_line"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>

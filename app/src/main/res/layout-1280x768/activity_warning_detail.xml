@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0ECED"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorTabNormal">
+
+        <Button
+            android:onClick="backClick"
+            android:id="@+id/btn_back"
+            android:layout_width="10dip"
+            android:layout_height="20dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:background="@mipmap/back"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@+id/btn_back"
+            android:text="报警信息"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/WarningItemTheme">
+
+                <TextView
+                    style="@style/WarningItemTxt1Theme"
+                    android:text="报警站点：" />
+
+                <TextView
+                    android:id="@+id/tv_station"
+                    style="@style/WarningItemTxt2Theme" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WarningItemTheme"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/WarningItemTxt1Theme"
+                    android:text="报警等级：" />
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    style="@style/WarningItemTxt2Theme" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WarningItemTheme"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/WarningItemTxt1Theme"
+                    android:text="报警时间：" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/WarningItemTxt2Theme" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WarningItemTheme"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/WarningItemTxt1Theme"
+                    android:text="报警设备：" />
+
+                <TextView
+                    android:id="@+id/tv_device"
+                    style="@style/WarningItemTxt2Theme" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WarningItemTheme"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/WarningItemTxt1Theme"
+                    android:text="报警原因：" />
+
+                <TextView
+                    android:id="@+id/tv_cause"
+                    style="@style/WarningItemTxt2Theme" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

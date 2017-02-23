@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "mems.jiaochuan.com.mems_2000"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+
+            // 这里是在 applicationId 中添加了一个后缀。所以『.』要加上
+            applicationIdSuffix ".release"
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        dev {
+            applicationIdSuffix ".dev"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
+    }
+
+    productFlavors {
+
+        //自定义名字不过不能和上面buildType中相同，不然Gradle编译会不通过。在这里使用了『flavors_』前缀以便区分。
+        flavors_release {
+
+            // manifestPlaceholders中写到的『str』，『package_name』不支持用大写，否则Gradle编译会不通过。
+            // 这里所设置的变量可以直接使用在『AndroidManifest.xml』中，使用方式为：${package_name}
+            // android:label="${package_name}"
+            manifestPlaceholders = [str: "releaseStr", package_name: "com.sunhz.mvptest.release"]
+
+            // 这里的参数是为了在 java 代码中使用，具体的使用方式为：context.getResources().getString(R.string.strKey);
+            resValue("string", "strKey", "releaseStrValue")
+        }
+
+        flavors_dev {
+            manifestPlaceholders = [str: "devStr", package_name: "com.sunhz.mvptest.dev"]
+
+            resValue("string", "strKey", "devStrValue")
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.feezu.liuli:timeselector:1.0.8+'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.xw.repo:PullToRefresh:2.1@aar'
+    provided fileTree(dir: 'libs', include: ['*.jar'])
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+}

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E2E2E2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="告警查询"
+            android:textColor="#0886F5"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_title"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    时间："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/edit_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_time_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="2016-07-18 14:05:55"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/calendar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    站点："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/edit_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_station_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="军区总医院站"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_station_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="60dp"
+                    android:src="@mipmap/trangle" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    级别："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/edit_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_level_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="一级"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_level_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="115dp"
+                    android:src="@mipmap/trangle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    系统："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@mipmap/edit_bg">
+                <TextView
+                    android:id="@+id/tv_system_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="电力系统"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_system_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="87dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/trangle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    设备："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@mipmap/edit_bg">
+                <TextView
+                    android:id="@+id/tv_device_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="空调"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_device_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="115dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/trangle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认人："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@mipmap/edit_bg">
+                <TextView
+                    android:id="@+id/tv_sure_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="张三"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_sure_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="100dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/trangle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_theme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关键词："
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_keyword_selelct"
+                style="@style/AlertEditTheme"
+                android:hint="燃气" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sure"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ll_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="#0886F5"
+        android:text="确认"
+        android:textColor="#fff" />
+
+
+</RelativeLayout>

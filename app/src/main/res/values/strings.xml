@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MEMS-2000</string>
+    <string name="prompt_username">用户名&#160;&#160; User ID</string>
+    <string name="prompt_password">密&#160;&#160;码  Password</string>
+    <string name="prompt_code">验证码&#160;Code</string>
+    <string name="action_sign_in">登&#160;陆</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_username">用户名不能为空</string>
+    <string name="error_incorrect_username">用户名太短了</string>
+    <string name="error_invalid_password">这个密码太短了</string>
+    <string name="error_incorrect_password">密码不能为空</string>
+    <string name="error_invalid_code">验证码不能为空</string>
+    <string name="error_incorrect_code">验证码错误</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="company_name">成都交大川电科技有限公司 版权所有</string>
+    <string name="gnjs">有首页，报警查询，个人中心三个模块,此APP主要是针对地铁能源的报警信息的及时提醒。</string>
+</resources>
